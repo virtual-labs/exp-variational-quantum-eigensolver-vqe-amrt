@@ -1,2 +1,1 @@
-### Aim of the experiment
-To demonstrate integer factorization using a quantum algorithm
+To demonstrate quantum job scheduling optimization by encoding task constraints into a Hamiltonian and using the Variational Quantum Eigensolver (VQE) to find the optimal schedule with minimum energy.
