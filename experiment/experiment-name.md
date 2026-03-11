@@ -1,2 +1,1 @@
-## Variational Quantum Eigen solver 
-
+## Variational Quantum Eigen solver
