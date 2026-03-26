@@ -49,16 +49,16 @@ The **Live Schedule Preview** shows the current schedule before optimization.
 
 In this step, a **parameterized quantum circuit (ansatz)** is created to represent possible scheduling solutions.
 
-Each job corresponds to a qubit, and a **rotation gate Rx(θ)** is applied to each qubit.
+Each job corresponds to a qubit, and a **rotation gate $R_x(\theta)$** is applied to each qubit.
 
-The parameters θ control the scheduling bias for each job.
+The parameters $\theta$ control the scheduling bias for each job.
 
-Use the **θ parameter sliders** to adjust the rotation angles for different jobs.
+Use the **$\theta$ parameter sliders** to adjust the rotation angles for different jobs.
 
 The ansatz circuit diagram shows:
 
 - **Qubits representing jobs**
-- **Rotation gates Rx(θ)** applied to each qubit
+- **Rotation gates $R_x(\theta)$** applied to each qubit
 - **Entanglement connections** representing job dependencies
 
 These parameters will later be optimized to find the best schedule.

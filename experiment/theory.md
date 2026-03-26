@@ -16,9 +16,9 @@ This approach follows the mapping:
 
 **1 Job = 1 Qubit**
 
-If there are **N jobs**, the quantum system uses **N qubits**, allowing it to represent up to:
+If there are $N$ **jobs**, the quantum system uses $N$ **qubits**, allowing it to represent up to:
 
-2^N possible scheduling configurations.
+$2^N$ possible scheduling configurations.
 
 This exponential representation allows quantum systems to explore a large solution space more efficiently than classical brute-force methods.
 
@@ -42,12 +42,12 @@ Frontend Dev must finish before Cloud Engineer.
 
 This constraint is encoded using a Hamiltonian term such as:
 
-H = c * Z_i Z_j
+$$H = c \cdot Z_i Z_j$$
 
 Where:
 
-- **c** represents the penalty weight of the rule
-- **Z_i and Z_j** are Pauli-Z operators acting on the qubits representing jobs i and j
+- $c$ represents the penalty weight of the rule
+- $Z_i$ and $Z_j$ are Pauli-Z operators acting on the qubits representing jobs $i$ and $j$
 
 Interpretation:
 
@@ -64,7 +64,7 @@ The Hamiltonian represents the **objective function** of the scheduling problem.
 
 It combines all penalty terms from the constraints:
 
-H = sum of all rule penalties
+$$H = \sum \text{of all rule penalties}$$
 
 Properties of the Hamiltonian:
 
@@ -87,12 +87,12 @@ The ansatz circuit prepares a quantum state using adjustable parameters.
 
 In this experiment, each qubit receives a **rotation gate**:
 
-Rx(theta)
+$$R_x(\theta)$$
 
 Where:
 
-- **Rx** is a rotation around the X-axis of the Bloch sphere
-- **theta (θ)** is a tunable parameter
+- $R_x$ is a rotation around the X-axis of the Bloch sphere
+- $\theta$ is a tunable parameter
 
 These parameters influence the probability distribution of scheduling outcomes. By adjusting them, the circuit explores different candidate schedules.
 
@@ -125,7 +125,7 @@ Common optimizers include:
 - SPSA
 - Gradient-based optimizers
 
-These algorithms adjust the parameters θ in the ansatz circuit to minimize the Hamiltonian energy.
+These algorithms adjust the parameters $\theta$ in the ansatz circuit to minimize the Hamiltonian energy.
 
 At each iteration, the optimizer evaluates whether the energy improves and updates the parameters accordingly.
 
