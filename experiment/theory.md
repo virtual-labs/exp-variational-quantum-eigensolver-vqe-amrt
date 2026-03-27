@@ -19,7 +19,19 @@ This approach follows the mapping:
 
 **1 Job = 1 Qubit**
 
-If there are $$N$$ **jobs**, the quantum system uses $$N$$ **qubits**, allowing it to represent up to:
+If there are
+
+$$
+N
+$$
+
+jobs, the quantum system uses
+
+$$
+N
+$$
+
+qubits, allowing it to represent up to:
 
 $$
 2^N
@@ -55,13 +67,15 @@ $$
 
 Where:
 
-Where:
-
 - $$c$$  
   represents the penalty weight of the rule  
 
 - $$Z_i \text{ and } Z_j$$  
-  are Pauli-Z operators acting on the qubits representing jobs $$i$$ and $$j$$
+  are Pauli-Z operators acting on the qubits representing jobs  
+
+$$
+i \text{ and } j
+$$
 
 Interpretation:
 
@@ -79,7 +93,7 @@ The Hamiltonian represents the **objective function** of the scheduling problem.
 It combines all penalty terms from the constraints:
 
 $$
-H = \sum \text{of all rule penalties}
+H = \sum_i H_i
 $$
 
 Properties of the Hamiltonian:
@@ -146,7 +160,13 @@ Common optimizers include:
 - SPSA
 - Gradient-based optimizers
 
-These algorithms adjust the parameters $$\theta$$ in the ansatz circuit to minimize the Hamiltonian energy.
+These algorithms adjust the parameters
+
+$$
+\theta
+$$
+
+in the ansatz circuit to minimize the Hamiltonian energy.
 
 At each iteration, the optimizer evaluates whether the energy improves and updates the parameters accordingly.
 
