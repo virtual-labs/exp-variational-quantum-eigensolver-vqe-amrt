@@ -1,3 +1,10 @@
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -19,25 +26,7 @@ This approach follows the mapping:
 
 **1 Job = 1 Qubit**
 
-If there are
-
-$$
-N
-$$
-
-jobs, the quantum system uses
-
-$$
-N
-$$
-
-qubits, allowing it to represent up to:
-
-$$
-2^N
-$$
-
-possible scheduling configurations.
+If there are $N$ jobs, the quantum system uses $N$ qubits, allowing it to represent up to: $2^N$ possible scheduling configurations.
 
 This exponential representation allows quantum systems to explore a large solution space more efficiently than classical brute-force methods.
 
@@ -67,15 +56,9 @@ $$
 
 Where:
 
-- $$c$$  
-  represents the penalty weight of the rule  
+- $c$ represents the penalty weight of the rule  
 
-- $$Z_i \text{ and } Z_j$$  
-  are Pauli-Z operators acting on the qubits representing jobs  
-
-$$
-i \text{ and } j
-$$
+- $Z_i \text{ and } Z_j$ are Pauli-Z operators acting on the qubits representing jobs $i \text{ and } j$
 
 Interpretation:
 
@@ -115,19 +98,13 @@ To explore possible scheduling configurations, the algorithm uses a **parameteri
 
 The ansatz circuit prepares a quantum state using adjustable parameters.
 
-In this experiment, each qubit receives a **rotation gate**:
-
-$$
-R_x(\theta)
-$$
+In this experiment, each qubit receives a **rotation gate**: $R_x(\theta)$
 
 Where:
 
-- $$R_x$$  
-  is a rotation around the X-axis of the Bloch sphere  
+- $R_x$ is a rotation around the X-axis of the Bloch sphere  
 
-- $$\theta$$  
-  is a tunable parameter
+- $\theta$ is a tunable parameter
 
 These parameters influence the probability distribution of scheduling outcomes. By adjusting them, the circuit explores different candidate schedules.
 
@@ -160,13 +137,7 @@ Common optimizers include:
 - SPSA
 - Gradient-based optimizers
 
-These algorithms adjust the parameters
-
-$$
-\theta
-$$
-
-in the ansatz circuit to minimize the Hamiltonian energy.
+These algorithms adjust the parameters $\theta$ in the ansatz circuit to minimize the Hamiltonian energy.
 
 At each iteration, the optimizer evaluates whether the energy improves and updates the parameters accordingly.
 
