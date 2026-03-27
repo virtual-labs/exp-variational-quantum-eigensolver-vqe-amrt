@@ -1,3 +1,6 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 #### Quantum Job Scheduling Using Variational Quantum Optimization
 
 In many real-world systems such as manufacturing pipelines, cloud computing workflows, and task scheduling in distributed systems, multiple jobs must be executed while respecting constraints such as machine availability and task dependencies. Finding the optimal ordering of jobs that satisfies all constraints while minimizing total completion time is a **combinatorial optimization problem**.
@@ -16,9 +19,13 @@ This approach follows the mapping:
 
 **1 Job = 1 Qubit**
 
-If there are $N$ **jobs**, the quantum system uses $N$ **qubits**, allowing it to represent up to:
+If there are $$N$$ **jobs**, the quantum system uses $$N$$ **qubits**, allowing it to represent up to:
 
-$2^N$ possible scheduling configurations.
+$$
+2^N
+$$
+
+possible scheduling configurations.
 
 This exponential representation allows quantum systems to explore a large solution space more efficiently than classical brute-force methods.
 
@@ -42,11 +49,13 @@ Frontend Dev must finish before Cloud Engineer.
 
 This constraint is encoded using a Hamiltonian term such as:
 
-$$H = c \cdot Z_i Z_j$$
+$$
+H = c \cdot Z_i Z_j
+$$
 
 Where:
 
-- $c$ represents the penalty weight of the rule
+- $c$ represents the penalty weight of the rule  
 - $Z_i$ and $Z_j$ are Pauli-Z operators acting on the qubits representing jobs $i$ and $j$
 
 Interpretation:
@@ -64,7 +73,9 @@ The Hamiltonian represents the **objective function** of the scheduling problem.
 
 It combines all penalty terms from the constraints:
 
-$$H = \sum \text{of all rule penalties}$$
+$$
+H = \sum \text{of all rule penalties}
+$$
 
 Properties of the Hamiltonian:
 
@@ -87,11 +98,13 @@ The ansatz circuit prepares a quantum state using adjustable parameters.
 
 In this experiment, each qubit receives a **rotation gate**:
 
-$$R_x(\theta)$$
+$$
+R_x(\theta)
+$$
 
 Where:
 
-- $R_x$ is a rotation around the X-axis of the Bloch sphere
+- $R_x$ is a rotation around the X-axis of the Bloch sphere  
 - $\theta$ is a tunable parameter
 
 These parameters influence the probability distribution of scheduling outcomes. By adjusting them, the circuit explores different candidate schedules.
@@ -125,7 +138,7 @@ Common optimizers include:
 - SPSA
 - Gradient-based optimizers
 
-These algorithms adjust the parameters $\theta$ in the ansatz circuit to minimize the Hamiltonian energy.
+These algorithms adjust the parameters $$\theta$$ in the ansatz circuit to minimize the Hamiltonian energy.
 
 At each iteration, the optimizer evaluates whether the energy improves and updates the parameters accordingly.
 
