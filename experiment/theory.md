@@ -55,8 +55,13 @@ $$
 
 Where:
 
-- $c$ represents the penalty weight of the rule  
-- $Z_i$ and $Z_j$ are Pauli-Z operators acting on the qubits representing jobs $i$ and $j$
+Where:
+
+- $$c$$  
+  represents the penalty weight of the rule  
+
+- $$Z_i \text{ and } Z_j$$  
+  are Pauli-Z operators acting on the qubits representing jobs $$i$$ and $$j$$
 
 Interpretation:
 
@@ -104,8 +109,11 @@ $$
 
 Where:
 
-- $R_x$ is a rotation around the X-axis of the Bloch sphere  
-- $\theta$ is a tunable parameter
+- $$R_x$$  
+  is a rotation around the X-axis of the Bloch sphere  
+
+- $$\theta$$  
+  is a tunable parameter
 
 These parameters influence the probability distribution of scheduling outcomes. By adjusting them, the circuit explores different candidate schedules.
 
